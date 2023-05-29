@@ -5,6 +5,8 @@ CHANGELOG.md
 # .tfstate files
 *.tfstate
 *.tfstate.*
+cloudflare_setttings_values.tf
+
 
 # Crash log files
 crash.log
