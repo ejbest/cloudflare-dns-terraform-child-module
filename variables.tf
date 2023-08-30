@@ -13,6 +13,12 @@ variable "cloudflare_value" {
   type        = string
 }
 
+variable "provider" {
+  description = "Whether the hostname gets Cloudflare's origin protection"
+  type        = bool
+  default     = true
+}
+
 variable "cloudflare_type" {
   description = "The type of the record"
   type        = string
