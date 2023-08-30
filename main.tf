@@ -3,7 +3,6 @@ data "cloudflare_zone" "zone" {
 }
 
 resource "cloudflare_record" "record" {
-  providers = var.tf_provider
   zone_id = data.cloudflare_zone.zone.id
   name    = var.cloudflare_name
   value   = var.cloudflare_value
