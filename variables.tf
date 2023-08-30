@@ -28,7 +28,7 @@ variable "proxied" {
   type        = bool
 }
 
-variable "provider" {
+variable "tf_provider" {
   description = "terraform provider"
   type        = string
 }
