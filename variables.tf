@@ -31,6 +31,6 @@ variable "proxied" {
 variable "tf_provider" {
   description = "terraform provider"
   type = list(object({
-    cloudflare = string
+    cloudflare = string,
   })
 }
