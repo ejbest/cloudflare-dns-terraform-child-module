@@ -20,10 +20,15 @@ variable "cloudflare_type" {
 
 variable "ttl" {
   description = "Time to live (TTL) of this load balancer's DNS"
-  type        = numbe
+  type        = number
 }
 
 variable "proxied" {
   description = "Whether the hostname gets Cloudflare's origin protection"
   type        = bool
+}
+variable "provider" {
+  description = "Whether the hostname gets Cloudflare's origin protection"
+  type        = bool
+  default     = true
 }
