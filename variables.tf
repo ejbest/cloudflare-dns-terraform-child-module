@@ -8,7 +8,7 @@ variable "cloudflare_name" {
   type        = string
 }
 
-variable "cloudflare_value" {
+variable "cloudflare_content" {
   description = "The (string) value of the record"
   type        = string
 }
