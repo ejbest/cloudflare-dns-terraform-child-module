@@ -41,3 +41,8 @@ resource "cloudflare_record" "record" {
   # Include 'priority' only if it exists in the map
   priority = contains(keys(var), "priority") ? var.priority : null
 }
+
+variable "priority" {
+  description = "The priority of the record."
+  type        = number
+}
