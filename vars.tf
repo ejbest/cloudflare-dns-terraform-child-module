@@ -28,4 +28,8 @@ variable "proxied" {
   type        = bool
 }
 
+variable "priority" {
+  description = "The priority of the record."
+  type        = number
+}
 
