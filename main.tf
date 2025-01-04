@@ -7,6 +7,6 @@ resource "cloudflare_record" "record" {
   name    = var.cloudflare_name
   content = var.cloudflare_content
   type    = var.cloudflare_type
-  ttl     = var.ttlte
+  ttl     = var.ttl
   proxied = var.proxied
 }
