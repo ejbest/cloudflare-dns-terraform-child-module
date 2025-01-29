@@ -22,7 +22,7 @@ data "cloudflare_zone" "zone" {
 #   ttl     = each.value.ttl
 #   proxied = false
 
-#   dynamic "priority" {
+#   dynamic "priority" {https://github.com/ejbest/cloudflare-dns-terraform-module/edit/main/main.tf
 #     for_each = each.value.type == "MX" && contains(keys(each.value), "priority") ? [each.value.priority] : []
 #     content {
 #       priority = priority.value
@@ -30,10 +30,10 @@ data "cloudflare_zone" "zone" {
 #   }
 # }
 
-resource "cloudflare_record" "record" {
+resource "cloudflare_dns_record" "record" {
   zone_id  = data.cloudflare_zone.zone.id
   name     = var.cloudflare_name
-  value    = var.cloudflare_content
+  content  = var.cloudflare_content
   type     = var.cloudflare_type
   ttl      = var.ttl
   proxied  = false
