@@ -30,7 +30,7 @@ data "cloudflare_zone" "zone" {
 #   }
 # }
 
-resource "cloudflare_record" "record" {
+resource "cloudflare_dns_record" "record" {
   zone_id  = data.cloudflare_zone.zone.id
   name     = var.cloudflare_name
   content  = var.cloudflare_content
@@ -39,3 +39,13 @@ resource "cloudflare_record" "record" {
   proxied  = false
   priority = var.priority
 }
+
+#resource "cloudflare_record" "record" {
+#  zone_id  = data.cloudflare_zone.zone.id
+#  name     = var.cloudflare_name
+#  content  = var.cloudflare_content
+#  type     = var.cloudflare_type
+#  ttl      = var.ttl
+#  proxied  = false
+#  priority = var.priority
+#}
