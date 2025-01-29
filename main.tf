@@ -30,10 +30,10 @@ data "cloudflare_zone" "zone" {
 #   }
 # }
 
-resource "cloudflare_dns_record" "record" {
+resource "cloudflare_record" "record" {
   zone_id  = data.cloudflare_zone.zone.id
   name     = var.cloudflare_name
-  content  = var.cloudflare_content
+  value    = var.cloudflare_content
   type     = var.cloudflare_type
   ttl      = var.ttl
   proxied  = false
